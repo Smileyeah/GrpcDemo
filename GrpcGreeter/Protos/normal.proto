@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcGreeter";
+
+package normal;
+
+import "google/protobuf/empty.proto";
+
+service Normal {
+  // Sends a greeting
+  rpc GetActors (google.protobuf.Empty) returns (Actors);
+}
+
+message Actors{
+	string actor = 1;
+	string actress = 2;
+}
